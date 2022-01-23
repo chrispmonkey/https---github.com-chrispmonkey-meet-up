@@ -7,15 +7,13 @@ import AllMeetupsPage from "./pages/AllMeetups";
 import NewMeetupsPage from "./pages/NewMeetup";
 import FavoritesPage from "./pages/Favorites";
 
-import MainNavigation from "./components/layout/MainNavigation";
+import Layout from "./components/layout/Layout";
 
 function App() {
   // localhost:3000/favorites
   // my-page.com/
   return (
-    <div>
-      <MainNavigation />
-
+    <Layout>
       <Switch>
         {/* Defualt path should end with / */}
         <Route path="/" exact>
@@ -32,7 +30,7 @@ function App() {
           <FavoritesPage />
         </Route>
       </Switch>
-    </div>
+    </Layout>
   );
 }
 
